@@ -10,7 +10,7 @@ class Enclosure {
     }
 
     public function __toString(){
-        $returnString ="Dans ma cage il y a : \n";
+        $returnString ="";
         foreach ($this->animals as $animal){
             $returnString .= $animal->getName()." : ".$animal->noise()."\n";
 

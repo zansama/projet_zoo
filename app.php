@@ -9,10 +9,12 @@ use \App\Animals\Zebra;
 use \App\Animals\Elephant;
 use \App\Animals\Parrot;
 use \App\Animals\Dove;
-use App\Enclosure;
 
-$newEnclosure = new Enclosure();
-echo $newEnclosure;
+use App\Zoo;
+
+
+$newZoo = new Zoo();
+
 
 $animals = [
     $fish = new Fish("Connard"),
@@ -44,9 +46,10 @@ $animals = [
     $dove = new Dove("Fournisseur"),
     ];
 foreach ($animals as $animal){
-    $newEnclosure->addAnimal($animal);
+    $newZoo->addAnimal($animal);
 }
-echo $newEnclosure;
+
+$newZoo::visitTheZoo();
 
 // print_r($animals);
 //for ($i = 0; $i < count($animals); $i++){
